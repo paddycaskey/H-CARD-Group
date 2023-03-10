@@ -6,14 +6,13 @@ public class BallController : MonoBehaviour {
 
     private Rigidbody2D RB;
     private Vector2 currentPos;
-    private bool isMoving;
     private int lastInput;
 
     public int speed;
 
     // constants
     private const int MOVE_DISTANCE = 25;
-    private const int MOVE_UP_DISTANCE = 20;
+    private const int MOVE_UP_DISTANCE = 25;
 
     private void Start()
     {
@@ -22,7 +21,7 @@ public class BallController : MonoBehaviour {
 
     private void Update()
     {
-        if (!isMoving)
+        if (RB.velocity == Vector2.zero)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
@@ -42,9 +41,8 @@ public class BallController : MonoBehaviour {
     private void Move(Vector2 direction)
     {
         currentPos = transform.position;
-        gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        RB.isKinematic = true;
         RB.velocity = direction * speed;
-        isMoving = true;
 
         if (direction == Vector2.left)
         {
@@ -79,9 +77,13 @@ public class BallController : MonoBehaviour {
     private void StopMoving()
     {
         RB.velocity = Vector2.zero;
-        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-        lastInput = 0;
+        RB.isKinematic = false;
         currentPos = transform.position;
-        isMoving = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        PointsController.instance.AddPoints();
+        Destroy(collision);
     }
 }
