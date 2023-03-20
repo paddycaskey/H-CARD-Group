@@ -9,7 +9,11 @@ public class PointsController : MonoBehaviour
     
     // add a text variable called points
     public Text pointsText;
+
     public int points = 0;
+    private float startTime;
+    private float endTime;
+    public float timeTaken;
     
     private void Awake()
     {
@@ -27,5 +31,17 @@ public class PointsController : MonoBehaviour
     {
         points += 1;
         pointsText.text = points.ToString();
+    }
+
+    public void StartTimer()
+    {
+        startTime = Time.time;
+    }
+
+    public void EndTimer()
+    {
+        endTime = Time.time;
+        timeTaken = endTime - startTime;
+        timeTaken = Mathf.Round(timeTaken * 100f) / 100f;
     }
 }
