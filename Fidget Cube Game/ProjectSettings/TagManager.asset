@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Point
+  - Coin
+  - Stop
+  - Challenger
   layers:
   - Default
   - TransparentFX
@@ -38,10 +42,13 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3463575429
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Tiles
     uniqueID: 1190026919
     locked: 0
   - name: Player
