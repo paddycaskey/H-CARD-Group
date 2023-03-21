@@ -9,6 +9,7 @@ public class TimerController : MonoBehaviour
     
     public float timerValue = 60;
     public Text timerText;
+    public bool game_ended = false;
     
     // Start is called before the first frame update
     void Start()
@@ -26,14 +27,20 @@ public class TimerController : MonoBehaviour
         else
         {
             timerValue = 0;
+            game_ended = true;
         }
-        FormatTime();
+        FormatTime(timerValue);
     }
 
-    public void FormatTime()
+    public void FormatTime(float timerValue)
     {
         int minutes = Mathf.FloorToInt(timerValue / 60);
         int seconds = Mathf.FloorToInt(timerValue % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void EndGame()
+    {
+        
     }
 }

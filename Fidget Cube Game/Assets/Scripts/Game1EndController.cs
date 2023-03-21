@@ -21,10 +21,11 @@ public class Game1EndController : MonoBehaviour
     public GameObject Star1;
     public GameObject Star2;
     public GameObject Star3;
-    public GameObject UI_canvas;
 
-    private int maxPoints = 3;
-    private float cutOffTime = 10f;
+    private int maxPointsGame1Easy = 3;
+    private int maxPointsGame2Medium = 25;
+    private float cutOffTimeGame1Easy = 10f;
+    private float cutOffTimeGame2Medium = 30f;
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,7 @@ public class Game1EndController : MonoBehaviour
     }
 
     public void ShowScoreTime()
+    // get score and time from PointsController and insert them in canvas Point text and Time text
     {
         if (game_num == 1)
         {
@@ -58,42 +60,148 @@ public class Game1EndController : MonoBehaviour
                 time = PointsController.instance.timeTaken.ToString();
                 TimeGO.GetComponent<UnityEngine.UI.Text>().text = time;
             }
-            
-            UI_canvas.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else if (game_num == 2)
+        {
+            // get score from Point object
+            score = Point.GetComponent<UnityEngine.UI.Text>().text;
+            GameObject Score = transform.GetChild(2).gameObject;
+            Score.GetComponent<UnityEngine.UI.Text>().text = score;
+
+            // get time from PointsController
+            time = PointsController.instance.timeTaken.ToString();
+            TimeGO.GetComponent<UnityEngine.UI.Text>().text = time;
         }
     }
 
     public void UpdateLeaderBoard()
+    // Find the best score in the leaderboard and update the screen with the best score and time
     {
-        (int bScore, float bTime) = GameManager.instance.Game1Easy();
-        bestScore = bScore.ToString();
-        bestTime = bTime.ToString();
-        LeaderScore.GetComponent<UnityEngine.UI.Text>().text = bestScore;
-        LeaderTime.GetComponent<UnityEngine.UI.Text>().text = bestTime;
+        // For game 1
+        if (game_num == 1)
+        {        
+            // For easy mode, get both score and time
+            if (easy)
+            {
+                (int bScore, float bTime) = GameManager.instance.Game1Easy();
+                bestScore = bScore.ToString();
+                bestTime = bTime.ToString();
+                LeaderScore.GetComponent<UnityEngine.UI.Text>().text = bestScore;
+                LeaderTime.GetComponent<UnityEngine.UI.Text>().text = bestTime;
+            }
+            // For hard mode, get only score
+            else if (hard)
+            {
+                int bScore = GameManager.instance.Game1Hard();
+                bestScore = bScore.ToString();
+                LeaderScore.GetComponent<UnityEngine.UI.Text>().text = bestScore;
+            }
+        }
+        // For game 2
+        else if (game_num == 2)
+        {
+            // For medium mode, get both score and time
+            (int bScore, float bTime) = GameManager.instance.Game2Medium();
+            bestScore = bScore.ToString();
+            bestTime = bTime.ToString();
+            LeaderScore.GetComponent<UnityEngine.UI.Text>().text = bestScore;
+            LeaderTime.GetComponent<UnityEngine.UI.Text>().text = bestTime;
+        }
     }
 
     public void UpdateStars()
+    // Update the stars shown based on the score and time
     {
-        if (int.Parse(score) != maxPoints && float.Parse(time) > cutOffTime)
+        // For game 1
+        if (game_num == 1)
         {
-            Star2.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
-            Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+            // For easy mode
+            if (easy)
+            {
+                // If score is maximum and time is below the cut off, show all stars or else remove accordingly
+                if (int.Parse(score) != maxPointsGame1Easy && float.Parse(time) > cutOffTimeGame1Easy)
+                {
+                    Star2.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                    Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                }
+                else if (int.Parse(score) != maxPointsGame1Easy || float.Parse(time) > cutOffTimeGame1Easy)
+                {
+                    Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                }
+            }
+            // For hard mode
+            else if (hard)
+            {
+                // if score is more than 130 then show all stars, if score is between 100 and 130 then show 2 stars, if score is less than 100 then show 1 star
+                if (int.Parse(score) < 100)
+                {
+                    Star2.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                    Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                }
+                else if (int.Parse(score) < 130)
+                {
+                    Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                }
+            }
         }
-        else if (int.Parse(score) != maxPoints || float.Parse(time) > cutOffTime)
+        // For game 2
+        else if (game_num == 2)
         {
-            Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+            // If score is maximum and time is below the cut off, show all stars or else remove accordingly
+            if (int.Parse(score) != maxPointsGame2Medium && float.Parse(time) > cutOffTimeGame2Medium)
+            {
+                Star2.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+                Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+            }
+            else if (int.Parse(score) != maxPointsGame2Medium || float.Parse(time) > cutOffTimeGame2Medium)
+            {
+                Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
+            }
         }
     }
     
     public void RestartGame()
     {
         // load the game scene
-        SceneController.instance.FadeToBlack("Game1Easy");
+        if (game_num == 1)
+        {
+            if (easy)
+            {
+                // load the easy game scene
+                SceneController.instance.FadeToBlack("Game1Easy");
+            }
+            else if (medium)
+            {
+                // load the medium game scene
+            }
+            else if (hard)
+            {
+                // load the hard game scene
+                SceneController.instance.FadeToBlack("Game1Hard");
+            }
+        }
+        else if (game_num == 2)
+        {
+            if (easy)
+            {
+                // load the easy game scene
+            }
+            else if (medium)
+            {
+                // load the medium game scene
+                SceneController.instance.FadeToBlack("Game2Medium");
+            }
+            else if (hard)
+            {
+                // load the hard game scene
+            }
+        }
     }
 
     public void GoToMenu()
     {
-        GameManager.instance.lastGamePlayed = 1;
+        // update the last game played
+        GameManager.instance.lastGamePlayed = game_num;
         // load the menu scene
         SceneController.instance.FadeToBlack("Menu");
     }

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class PointsController : MonoBehaviour
 {
     public static PointsController instance;
-    
-    // add a text variable called points
     public Text pointsText;
 
     public int points = 0;
@@ -27,18 +25,21 @@ public class PointsController : MonoBehaviour
         pointsText.text = "0";
     }
 
-    public void AddPoints()
+    public void AddPoints(int value)
+    // Add a value of points
     {
-        points += 1;
+        points += value;
         pointsText.text = points.ToString();
     }
 
     public void StartTimer()
+    // Start the timer
     {
         startTime = Time.time;
     }
 
     public void EndTimer()
+    // End the timer
     {
         endTime = Time.time;
         timeTaken = endTime - startTime;

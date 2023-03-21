@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Point
+  - Coin
+  - Stop
+  - Challenger
   layers:
   - Default
   - TransparentFX

@@ -15,9 +15,15 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        instance = this;
-        DontDestroyOnLoad(this);
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }   
     }
 
     // Update is called once per frame

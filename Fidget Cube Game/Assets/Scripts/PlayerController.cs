@@ -71,12 +71,11 @@ public class PlayerController : MonoBehaviour
     {
         if (game == 1)
         {
-            SceneController.instance.FadeToBlack("Game1Easy");
-            // SceneManager.LoadScene("Game1Easy");
+            SceneController.instance.FadeToBlack("Game1Levels");
         }
         else if (game == 2)
         {
-            // transform.position = game2;
+            SceneController.instance.FadeToBlack("Game2Levels");
         }
         else if (game == 3)
         {
