@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Game1EndController : MonoBehaviour
+public class GameEndController : MonoBehaviour
 {   
     private string score;
     private string time;
@@ -22,6 +22,10 @@ public class Game1EndController : MonoBehaviour
     public GameObject Star2;
     public GameObject Star3;
 
+    public GameObject replayBtn;
+    public GameObject homeBtn;
+    public GameObject eventSystem;
+
     private int maxPointsGame1Easy = 3;
     private int maxPointsGame2Medium = 25;
     private float cutOffTimeGame1Easy = 10f;
@@ -35,7 +39,8 @@ public class Game1EndController : MonoBehaviour
         {
             UpdateLeaderBoard();
             UpdateStars();
-        }          
+        }
+        eventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(replayBtn);          
     }
 
     // Update is called once per frame
