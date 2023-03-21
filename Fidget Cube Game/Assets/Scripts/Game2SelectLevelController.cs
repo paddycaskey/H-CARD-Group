@@ -16,7 +16,9 @@ public class Game2SelectLevelController : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        // update the last game played
+        GameManager.instance.lastGamePlayed = 2;
+        SceneController.instance.FadeToBlack("Menu");
     }
 
     public void MediumLevelInstruct()
@@ -33,6 +35,6 @@ public class Game2SelectLevelController : MonoBehaviour
 
     public void Game2MediumLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game2Medium");
+        SceneController.instance.FadeToBlack("Game2Medium");
     }
 }

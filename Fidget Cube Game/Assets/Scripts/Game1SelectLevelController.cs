@@ -20,7 +20,9 @@ public class Game1SelectLevelController : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        // update the last game played
+        GameManager.instance.lastGamePlayed = 1;
+        SceneController.instance.FadeToBlack("Menu");
     }
 
     public void EasyLevelInstruct()
@@ -46,12 +48,12 @@ public class Game1SelectLevelController : MonoBehaviour
 
     public void Game1EasyLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game1Easy");
+        SceneController.instance.FadeToBlack("Game1Easy");
     }
 
     public void Game1HardLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game1Hard");
+        SceneController.instance.FadeToBlack("Game1Hard");
     }
 
 

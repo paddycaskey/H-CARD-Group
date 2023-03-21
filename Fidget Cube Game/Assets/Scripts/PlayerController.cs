@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         gamePos.Add(game5);
 
         game = GameManager.instance.lastGamePlayed;
+        GetComponent<RectTransform>().anchoredPosition = gamePos[game - 1];
         GetComponent<Image>().sprite = GameManager.instance.avatar;
     }
 

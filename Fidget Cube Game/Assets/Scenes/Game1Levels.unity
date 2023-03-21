@@ -324,8 +324,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 781631946}
-        m_TargetAssemblyTypeName: SelectLevelController, Assembly-CSharp
-        m_MethodName: HardLevel
+        m_TargetAssemblyTypeName: Game1SelectLevelController, Assembly-CSharp
+        m_MethodName: Game1HardLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -797,7 +797,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 781631946}
-        m_TargetAssemblyTypeName: SelectLevelController, Assembly-CSharp
+        m_TargetAssemblyTypeName: Game1SelectLevelController, Assembly-CSharp
         m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
@@ -1822,8 +1822,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 781631946}
-        m_TargetAssemblyTypeName: SelectLevelController, Assembly-CSharp
-        m_MethodName: EasyLevel
+        m_TargetAssemblyTypeName: Game1SelectLevelController, Assembly-CSharp
+        m_MethodName: Game1EasyLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
