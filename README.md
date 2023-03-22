@@ -23,6 +23,8 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 - Collect coins along the way to maximize points
 
+<img align="right" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
+
 ### 2. A-Maze
 
 - Navigate through the maze using the joystick from start to end
@@ -30,6 +32,8 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 - When faced with a colored square, complete the task on the required face
 
 - Find more squares to maximize points
+
+<img align="right" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
 
 ---
 ## Future Plans
