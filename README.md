@@ -17,7 +17,7 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 ### 1. Jump and Slide
 
-<img align="right" img height="80" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
+<img align="right" img height="120" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
 
 - Navigate left and right using the joystick
 
@@ -27,7 +27,7 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 ### 2. A-Maze
 
-<img align="right" img height="80" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
+<img align="right" img height="120" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
 
 - Navigate through the maze using the joystick from start to end
 
