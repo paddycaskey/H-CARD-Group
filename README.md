@@ -1,4 +1,4 @@
-# $$\left(DEX^3 - A game controller to make rehabilitation feel easy)
+# DEX$^3$ - A game controller to make rehabilitation feel easy
 ---
 
 <img align="right" img height="500" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/cube.jpeg" />
