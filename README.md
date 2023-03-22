@@ -17,7 +17,8 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 ## Game Interface
 
 ### Homescreen & Avatar Selection
-<img align="center" img height="200" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/Screen Shot 2023-03-22 at 16.49.42.png" />
+
+<img align="center" img height="250" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/AvatarHome.png" />
 
 
 ## The Games
