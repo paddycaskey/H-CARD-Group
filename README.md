@@ -1,7 +1,7 @@
 # DEX3 - A game controller to make rehabilitation feel easy
 ---
 
-<img align="left" img height="500" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/cube.jpeg" />
+<img align="centre" img height="500" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/cube.jpeg" />
 
 ## Members: Paddy Caskey, Sabrina Tayla Franco, Michelle Kostin, Bella Szczech, Nabeel Azuhar Mohammed
 ---
