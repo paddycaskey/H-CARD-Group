@@ -17,23 +17,23 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 ### 1. Jump and Slide
 
+<img align="right" img height="80" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
+
 - Navigate left and right using the joystick
 
 - Press both buttons simultaneously to move up platforms
 
 - Collect coins along the way to maximize points
 
-<img align="right" img height="20" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
-
 ### 2. A-Maze
+
+<img align="right" img height="80" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
 
 - Navigate through the maze using the joystick from start to end
 
 - When faced with a colored square, complete the task on the required face
 
 - Find more squares to maximize points
-
-<img align="right" img height="20" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
 
 ---
 ## Future Plans
