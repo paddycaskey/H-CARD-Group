@@ -17,19 +17,19 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 ### 1. Jump and Slide
 
-1.Navigate left and right using the joystick
+- Navigate left and right using the joystick
 
-2. Press both buttons simultaneously to move up platforms
+- Press both buttons simultaneously to move up platforms
 
-3. Collect coins along the way to maximize points
+- Collect coins along the way to maximize points
 
 ### 2. A-Maze
 
-1. Navigate through the maze using the joystick from start to end
+- Navigate through the maze using the joystick from start to end
 
-2. When faced with a colored square, complete the task on the required face
+- When faced with a colored square, complete the task on the required face
 
-3. Find more squares to maximize points
+- Find more squares to maximize points
 
 ---
 ## Future Plans
