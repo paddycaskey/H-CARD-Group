@@ -745,6 +745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045b1830ea78b7c42813fef2fa3adb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 1300276086}
+  yesBtn: {fileID: 58610370}
 --- !u!1 &996340079
 GameObject:
   m_ObjectHideFlags: 0
