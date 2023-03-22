@@ -14,6 +14,11 @@ Each face of the cube presents different modes of motion to control simple game 
 Our product aims to fill a gap in the market for young adults needing engaging and rewarding rehabilitation devices.
 
 ---
+## Game Interface
+
+### Homescreen 
+<img align="right" img height="500" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/ScreenShot2023-03-22at16.49.42.png" />
+
 ## The Games
 
 ### 1. Jump and Slide <img align="right" img height="150" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
