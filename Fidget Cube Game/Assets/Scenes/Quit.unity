@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 58610373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 733968268}
+        m_TargetAssemblyTypeName: QuitController, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &58610373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,8 +651,8 @@ GameObject:
   - component: {fileID: 733968263}
   - component: {fileID: 733968266}
   - component: {fileID: 733968265}
-  - component: {fileID: 733968264}
   - component: {fileID: 733968267}
+  - component: {fileID: 733968268}
   m_Layer: 5
   m_Name: Player
   m_TagString: Player
@@ -665,24 +677,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222, y: -300}
+  m_AnchoredPosition: {x: 749, y: -347}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &733968264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 733968262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df459c35de48e314e8bce4c8547d9878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: 1
-  quitPanel: {fileID: 1583796282}
-  eventSystem: {fileID: 1300276086}
 --- !u!114 &733968265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +733,18 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &733968268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733968262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045b1830ea78b7c42813fef2fa3adb16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &996340079
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +903,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173625568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 733968268}
+        m_TargetAssemblyTypeName: QuitController, Assembly-CSharp
+        m_MethodName: ReturnToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1173625568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 58610370}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1300276089
@@ -1397,7 +1418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1583796283
 RectTransform:
   m_ObjectHideFlags: 0
