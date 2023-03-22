@@ -98,8 +98,8 @@ public class AnimationController : MonoBehaviour
         // as time increases, move logo to the right until it goes out of screen
         if (instructions.GetComponent<RectTransform>().anchoredPosition.y > -0.1)
         {
-            logo.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, -animSpeed * 100);
-            instructions.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, -animSpeed * 100);
+            logo.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, -animSpeed * 500);
+            instructions.GetComponent<RectTransform>().anchoredPosition += new Vector2(0, -animSpeed * 500);
         }
         else
         {

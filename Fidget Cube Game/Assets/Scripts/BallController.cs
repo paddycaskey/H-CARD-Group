@@ -119,6 +119,10 @@ public class BallController : MonoBehaviour {
     {
         RB.velocity = Vector2.zero;
         RB.isKinematic = false;
+        // find the multiple of 25 that the x coordinate of the ball is closest to
+        float x = Mathf.Round(transform.position.x / 25) * 25;
+        Debug.Log(x);
+        transform.position = new Vector2(x, transform.position.y);
         currentPos = transform.position;
     }
 
@@ -145,7 +149,10 @@ public class BallController : MonoBehaviour {
     {
         canMove = false;
         GameManager.instance.UpdateLeaderBoard(1, 3, PointsController.instance.points, 60f);
-        GamePassed();
+        // set confetti to activate
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(true);
+        Invoke("GamePassed", 4);
     }
     
     void OnTriggerEnter2D(Collider2D collision)

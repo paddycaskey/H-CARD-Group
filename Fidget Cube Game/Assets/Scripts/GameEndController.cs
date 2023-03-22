@@ -26,7 +26,7 @@ public class GameEndController : MonoBehaviour
     public GameObject homeBtn;
     public GameObject eventSystem;
 
-    private int maxPointsGame1Easy = 3;
+    private int maxPointsGame1Easy = 21;
     private int maxPointsGame2Medium = 25;
     private float cutOffTimeGame1Easy = 10f;
     private float cutOffTimeGame2Medium = 30f;
