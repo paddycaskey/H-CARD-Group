@@ -23,7 +23,7 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 - Collect coins along the way to maximize points
 
-<img align="right" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
+<img align="right" img height="20" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/jumpgame.JPG" />
 
 ### 2. A-Maze
 
@@ -33,7 +33,7 @@ Our product aims to fill a gap in the market for young adults needing engaging a
 
 - Find more squares to maximize points
 
-<img align="right" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
+<img align="right" img height="20" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/amaze.JPG" />
 
 ---
 ## Future Plans
