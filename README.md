@@ -3,7 +3,7 @@
 
 <img align="right" img height="500" src="https://github.com/paddycaskey/H-CARD-Group/blob/main/Pictures%20for%20Github/cube.jpeg" />
 
-## Members: Paddy Caskey, Sabrina Tayla, Michelle Kostin, Bella Szczech, Nabeel Azuhar Mohammed
+## Members: Paddy Caskey, Sabrina Tayla Franco, Michelle Kostin, Bella Szczech, Nabeel Azuhar Mohammed
 ---
 ## Our Product
 
