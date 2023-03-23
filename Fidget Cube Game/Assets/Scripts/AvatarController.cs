@@ -40,7 +40,7 @@ public class AvatarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             Move();
         }
@@ -68,20 +68,46 @@ public class AvatarController : MonoBehaviour
 
     private void Move()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (currentAvatar != 9)
+            if (currentAvatar == 9 || currentAvatar == 4)
+            {
+                
+            }
+            else
             {
                 currentAvatar++;
                 SetAvatarActive(currentAvatar);
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if (currentAvatar != 0)
+            if (currentAvatar == 0 || currentAvatar == 5)
+            {
+            
+            }
+            else
             {
                 currentAvatar--;
+                SetAvatarActive(currentAvatar);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (currentAvatar >= 0 && currentAvatar < 5)
+            {
+                currentAvatar += 5;
+                SetAvatarActive(currentAvatar);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            if (currentAvatar > 4 && currentAvatar < 10)
+            {
+                currentAvatar -= 5;
                 SetAvatarActive(currentAvatar);
             }
         }

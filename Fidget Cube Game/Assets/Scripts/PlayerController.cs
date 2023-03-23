@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Select game
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             Move();
         }
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         //if up keystroke then they move to another position
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (game != 2)
             {
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         }
         
         //if down keystroke then they move to another position
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (game != 0)
             {
