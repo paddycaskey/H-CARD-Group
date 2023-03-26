@@ -28,8 +28,8 @@ public class GameEndController : MonoBehaviour
 
     private int maxPointsGame1Easy = 21;
     private int maxPointsGame2Medium = 25;
-    private float cutOffTimeGame1Easy = 10f;
-    private float cutOffTimeGame2Medium = 30f;
+    private float cutOffTimeGame1Easy = 20f;
+    private float cutOffTimeGame2Medium = 35f;
     
     // Start is called before the first frame update
     void Start()
@@ -138,12 +138,12 @@ public class GameEndController : MonoBehaviour
             else if (hard)
             {
                 // if score is more than 130 then show all stars, if score is between 100 and 130 then show 2 stars, if score is less than 100 then show 1 star
-                if (int.Parse(score) < 100)
+                if (int.Parse(score) < 90)
                 {
                     Star2.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
                     Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
                 }
-                else if (int.Parse(score) < 130)
+                else if (int.Parse(score) < 110)
                 {
                     Star3.GetComponent<UnityEngine.UI.Image>().color = Color.gray;
                 }
